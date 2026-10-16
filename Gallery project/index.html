@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PhotoGallery is a curated collection of beautiful moments from nature, cities, and wildlife.">
+    <title>PhotoGallery | Beautiful Moments</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header" id="home">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="PhotoGallery home"><span class="brand-mark">PG</span><span>Photo<span>Gallery</span></span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            <div class="nav-links" id="navLinks">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#gallery">Gallery</a>
+                <a class="nav-link" href="#about">About</a>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode"><span id="themeIcon">☼</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Explore <span>•</span> Discover <span>•</span> Enjoy</p>
+                <h1 id="hero-title">Beautiful <em>Moments</em></h1>
+                <p class="hero-description">A collection of stunning images from nature, cities, and wildlife. Find a little wonder in every frame.</p>
+                <a class="primary-button" href="#gallery">Explore gallery <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="hero-orbit hero-orbit-one"></div>
+                <div class="hero-orbit hero-orbit-two"></div>
+                <div class="hero-photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt=""></div>
+                <div class="hero-caption"><span class="status-dot"></span> Curated visual stories</div>
+            </div>
+        </section>
+
+        <section class="gallery-section container" id="gallery" aria-labelledby="gallery-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">The collection</p>
+                    <h2 id="gallery-title">Find your <em>frame</em></h2>
+                </div>
+                <p class="section-note"><span id="imageCount">15</span> carefully selected photographs</p>
+            </div>
+            <div class="gallery-toolbar">
+                <div class="filters" role="group" aria-label="Filter gallery by category">
+                    <button class="filter-button active" data-filter="All" type="button">All <span>15</span></button>
+                    <button class="filter-button" data-filter="Nature" type="button">Nature <span>03</span></button>
+                    <button class="filter-button" data-filter="City" type="button">City <span>03</span></button>
+                    <button class="filter-button" data-filter="Animals" type="button">Animals <span>03</span></button>
+                    <button class="filter-button" data-filter="Tech" type="button">Tech <span>06</span></button>
+                </div>
+                <div class="gallery-actions">
+                    <button class="add-picture-button" id="addPictureButton" type="button"><span aria-hidden="true">+</span> Add picture</button>
+                    <input id="pictureInput" type="file" accept="image/*" multiple hidden>
+                    <label class="select-wrap" for="imageEffect">View <select id="imageEffect"><option value="none">Original</option><option value="contrast">Cinematic</option><option value="grayscale">Monochrome</option><option value="warm">Warm light</option></select></label>
+                </div>
+            </div>
+            <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+            <p class="empty-state" id="emptyState" hidden>No photographs found in this collection.</p>
+        </section>
+
+        <section class="about-section" id="about" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">The point of view</p>
+                    <h2 id="about-title">Good light.<br><em>Real feeling.</em></h2>
+                </div>
+                <div class="about-copy">
+                    <p>PhotoGallery is a quiet corner for images that make you pause. From wild landscapes to familiar streets, every photograph is chosen for its ability to tell a story without saying a word.</p>
+                    <p class="signature">Collected with intention <span>—</span> 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container"><a class="brand" href="#home"><span class="brand-mark">PG</span><span>Photo<span>Gallery</span></span></a>
+        <p>Made for the moments worth keeping.</p>
+        <p class="footer-copy">© 2026 PhotoGallery · Developer: Zohaib Abhmed</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image viewer">×</button>
+        <button class="lightbox-arrow previous" id="previousButton" type="button" aria-label="Previous image">←</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-wrap"><img id="lightboxImage" src="" alt=""></div>
+            <div class="lightbox-info">
+                <div>
+                    <p class="lightbox-category" id="lightboxCategory"></p>
+                    <h2 id="lightboxTitle"></h2>
+                </div>
+                <p class="lightbox-counter" id="lightboxCounter"></p>
+            </div>
+        </div>
+        <button class="lightbox-arrow next" id="nextButton" type="button" aria-label="Next image">→</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PhotoGallery logo">
+  <defs>
+    <linearGradient id="mark" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8098ff"/>
+      <stop offset="1" stop-color="#4359d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#080d18"/>
+  <rect x="6" y="6" width="52" height="52" rx="15" fill="url(#mark)"/>
+  <path d="M18 45V19h10.5c7 0 11.5 3.7 11.5 9.4 0 5.8-4.5 9.5-11.5 9.5H24V45h-6Zm6-12.2h4.2c3.7 0 5.8-1.4 5.8-4.4 0-2.9-2.1-4.3-5.8-4.3H24v8.7Z" fill="#fff"/>
+  <path d="M39 45V19h6v26h-6Z" fill="#dfe5ff"/>
+</svg>
